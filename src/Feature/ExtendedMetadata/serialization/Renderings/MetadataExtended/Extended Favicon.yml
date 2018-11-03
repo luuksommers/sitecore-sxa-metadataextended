@@ -1,0 +1,30 @@
+﻿---
+ID: "bd340faa-147d-4027-aeeb-406f9a6eb00f"
+Parent: "94244293-15a6-4761-bab7-53b0cf07c4c9"
+Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
+Path: /sitecore/layout/Renderings/Feature/MetadataExtended/Extended Favicon
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/star.png
+- ID: "49b9d6c5-9551-4ba4-840e-74d5582256c0"
+  Hint: RenderingViewPath
+  Value: ~/Areas/SiteMetadata/Views/FaviconExtended.cshtml
+- ID: "94069f66-609c-48b0-8281-521c30fb269d"
+  Hint: Open Properties after Add
+  Value: 0
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+- ID: "e64ad073-dfcc-4d20-8c0b-fe5aa6226cd7"
+  Hint: Controller
+  Value: Allego.Asp.Feature.ExperienceAccelerator.Areas.SiteMetadata.Controllers.FaviconExtendedController,Allego.Asp.Feature.ExperienceAccelerator
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160413T134531Z

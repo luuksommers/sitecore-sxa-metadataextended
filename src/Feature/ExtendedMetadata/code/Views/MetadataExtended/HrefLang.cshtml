@@ -1,0 +1,6 @@
+﻿@model Allego.Asp.Feature.ExperienceAccelerator.Areas.Seo.Models.HrefLangRenderingModel
+
+@foreach (var lang in Model.AlternateUrls)
+{
+    <link rel="alternate" hreflang="@lang.Key" href="@lang.Value" />
+}

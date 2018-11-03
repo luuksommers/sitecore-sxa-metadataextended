@@ -1,0 +1,34 @@
+﻿@model Allego.Asp.Feature.ExperienceAccelerator.Areas.SiteMetadata.Models.FaviconExtendedModel
+
+@if (Model.AppleTouchIcon != null)
+{
+    <link rel="apple-touch-icon" sizes="180x180" href="@Model.AppleTouchIcon">
+}
+@if (Model.Icon32x32 != null)
+{
+    <link rel="icon" type="image/png" sizes="32x32" href="@Model.Icon32x32">
+}
+@if (Model.Icon16x16 != null)
+{
+    <link rel="icon" type="image/png" sizes="16x16" href="@Model.Icon16x16">
+}
+@if (Model.SiteManifest != null)
+{
+    <link rel="manifest" href="@Model.SiteManifest">
+}
+@if (Model.MaskIcon != null && Model.MaskIconColor != null)
+{
+    <link rel="mask-icon" href="@Model.MaskIcon" color="@Model.MaskIconColor">
+}
+@if (Model.BrowserConfig != null)
+{
+    <meta name="msapplication-config" content="@Model.BrowserConfig">
+}
+@if (Model.TileColor != null)
+{
+    <meta name="msapplication-TileColor" content="@Model.TileColor">
+}
+@if (Model.ThemeColor != null)
+{
+    <meta name="theme-color" content="@Model.ThemeColor">
+}
