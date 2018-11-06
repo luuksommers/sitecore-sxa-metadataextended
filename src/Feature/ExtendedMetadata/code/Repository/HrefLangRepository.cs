@@ -7,6 +7,7 @@ using Sitecore.Links;
 using Sitecore.XA.Foundation.Multisite;
 using Sitecore.XA.Foundation.Mvc.Repositories.Base;
 using Sitecore.XA.Foundation.RenderingVariants.Repositories;
+using SXA.Feature.MetadataExtended.Extensions;
 using SXA.Feature.MetadataExtended.Models;
 
 namespace SXA.Feature.MetadataExtended.Repositories
@@ -25,14 +26,10 @@ namespace SXA.Feature.MetadataExtended.Repositories
             
             foreach (var lang in supportedLanguages)
             {
-                // We have to get the language item for the right display-name
-                var languageItem = item.Database.GetItem(item.ID, Language.Parse(lang.Name));
-
-                // And use the Language switcher to get the right language in the url
-                using (new LanguageSwitcher(lang.Name))
+                var localizedUrl = item.LocalizedUrl(lang.Name);
+                if (!string.IsNullOrEmpty(localizedUrl))
                 {
-                    var url = LinkManager.GetItemUrl(languageItem);
-                    model.AlternateUrls.Add(lang.Name, url);
+                    model.AlternateUrls.Add(lang.Name, localizedUrl);
                 }
             }
 
