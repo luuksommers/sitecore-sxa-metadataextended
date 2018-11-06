@@ -26,7 +26,7 @@ namespace SXA.Feature.MetadataExtended.Repositories
             
             foreach (var lang in supportedLanguages)
             {
-                var localizedUrl = item.LocalizedUrl(lang.Name);
+                var localizedUrl = item.LocalizedUrl(lang.Name, includeServerUrl: true);
                 if (!string.IsNullOrEmpty(localizedUrl))
                 {
                     model.AlternateUrls.Add(lang.Name, localizedUrl);

@@ -13,10 +13,13 @@ namespace SXA.Feature.MetadataExtended.Extensions
         /// <summary>
         /// This extension helps you getting the right localized url
         /// </summary>
-        public static string LocalizedUrl(this Item item, string languageCode)
+        public static string LocalizedUrl(this Item item, string languageCode, bool? includeServerUrl = null)
         {
             var options = LinkManager.GetDefaultUrlOptions();
-            options.AlwaysIncludeServerUrl = true;
+            if (includeServerUrl.HasValue)
+            {
+                options.AlwaysIncludeServerUrl = includeServerUrl.Value;
+            }
 
             var language = Language.Parse(languageCode);
 
